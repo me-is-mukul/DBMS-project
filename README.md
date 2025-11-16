@@ -1,40 +1,82 @@
-# DBMS-project
 
-This is a simple backend for a song providing services like spotify
 
-## HOW TO INSTALL AND RUN
-I JUST HOPE YOU HAVE MYSQL-8.0.4 OR ABOVE INSTALLED IN YOUR SYSTEM AND YOU ARE ON UNIX
 
-### RUN THIS
-FIRST MAKE A DATABASE "OHO" IN YOUR MYSQL
-```
+A minimal and clean backend implementation for a music-streaming platform using **MySQL** and **Python**.
+Built for DBMS learning and practical backend design.
+
+---
+
+## **Prerequisites**
+
+Make sure you have:
+
+* **Python 3.10+**
+* **MySQL 8.0.4 or above**
+* A **Unix-based system** (Linux or macOS)
+
+---
+
+## **Installation & Setup**
+
+Clone the repository:
+
+```bash
 git clone https://github.com/me-is-mukul/DBMS-project.git
 cd DBMS-project
 ```
 
+---
+
+## **1. Create the MySQL Database**
+
+Open MySQL and create the database:
+
+```sql
+CREATE DATABASE oho;
 ```
+
+Now import the schema + data:
+
+```bash
 mysql -u root -p oho < backup.sql
 ```
-ENTER THE PASSWORD AND THEN IT WILL TAKE TIME
-AFTER THAT CLOSE MYSQL
-NOW IN THE REPO DIRECTORY RUN
-```
+
+Enter your MySQL password when asked.
+This may take a few seconds depending on system speed.
+
+---
+
+## **2. Configure Environment Variables**
+
+In the project root:
+
+```bash
 touch .env
 ```
-NOW OPEN THIS .ENV FILE IN A TEXT EDITOR AND WRITE 
+
+Open `.env` in any editor and add:
+
+```env
+PASSWORD="<YOUR MYSQL PASSWORD>"
 ```
-PASSWORD = "<YOUR MYSQL PASSWORD>"
-```
-#### PYTHON DEPENDENCY INSTALLATION
-```
+
+Make sure it contains **only your password**, nothing else.
+
+---
+
+## **3. Install Python Dependencies**
+
+Create and activate a virtual environment:
+
+```bash
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
-### YOU ARE ALL SET
-```
+---
+
+## **4. Run the Project**
+
+```bash
 python main.py
 ```
-
-
-
