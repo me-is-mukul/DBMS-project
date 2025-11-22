@@ -28,59 +28,8 @@ Clone the repository:
 git clone https://github.com/me-is-mukul/DBMS-project.git
 cd DBMS-project
 ```
-
----
-
-## **1. Create the MySQL Database**
-
-Open MySQL and create the database:
-
-```sql
-CREATE DATABASE oho;
-```
-
-Now import the schema + data:
-
+Run our customized setup script to set everything up
 ```bash
-mysql -u root -p oho < backup.sql
-```
-
-Enter your MySQL password when asked.
-This may take a few seconds depending on system speed.
-
----
-
-## **2. Configure Environment Variables**
-
-In the project root:
-
-```bash
-touch .env
-```
-
-Open `.env` in any editor and add:
-
-```env
-PASSWORD="<YOUR MYSQL PASSWORD>"
-```
-
-Make sure it contains **only your password**, nothing else.
-
----
-
-## **3. Install Python Dependencies**
-
-Create and activate a virtual environment:
-
-```bash
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-```
----
-
-## **4. Run the Project**
-
-```bash
-python main.py
+chmod +x setup.sh
+./setup.sh
 ```
